@@ -124,3 +124,6 @@ STATIC_URL = '/static/'
 
 # To use bootstrap with the crispy form library
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL = 'login'

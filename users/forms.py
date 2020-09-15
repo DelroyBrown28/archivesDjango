@@ -8,5 +8,6 @@ class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
     # keeps configurations in once place
     class Meta:
+        # specifies the form to be interacted with
         model = User
         fields = ['username', 'email', 'password1', 'password2']
