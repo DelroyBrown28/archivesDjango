@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'archivesBlogApp.apps.ArchivesblogappConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'crispy_forms_materialize',
+    'materialize',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,8 +129,8 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# To use bootstrap with the crispy form library
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# To use materialize with the crispy form library
+CRISPY_TEMPLATE_PACK = 'materialize_css_forms'
 
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
