@@ -5,6 +5,10 @@ body {
     flex-flow: column;
 }
 
+a {
+    color: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -16,12 +20,6 @@ h6 {
 
 ul {
     margin: 0;
-}
-
-.header_contents {
-
-
-    
 }
 
 
@@ -93,7 +91,7 @@ a.article-title:hover {
     flex-flow: column;
     align-items: center;
 
-    
+
 }
 
 
@@ -108,6 +106,7 @@ a.article-title:hover {
     text-align: center;
     color: #ffffff93;
     font-weight: 300;
+    margin: 5px 0px;
 }
 
 .btn_wrap {
@@ -116,7 +115,7 @@ a.article-title:hover {
     flex-flow: column;
     justify-content: space-evenly;
 
-    
+
 }
 
 .sign_in_btns {
@@ -125,16 +124,23 @@ a.article-title:hover {
     border: none;
     transition: 0.3s;
     cursor: pointer;
+   
 
 }
 
 .signin_btn,
 .register_btn {
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     color: #fff;
     font-family: 'Inter', sans-serif;
+    font-weight: 300;
 
+}
+
+.signin_btn {
+    background-color: #fff;
+    color: #000;
 }
 
 .register_btn {
@@ -143,6 +149,38 @@ a.article-title:hover {
     justify-content: center;
 }
 
+div#div_id_password {
+    margin: 0;
+}
+
+#id_username,
+#id_password {
+    color: #fff;
+}
+
+.forgotpw_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.forgot_pw_link {
+    opacity: 0.3;
+}
+
+.forgot_pw_icon {
+    opacity: 0;
+}
+
+
 input[type=text]:not(.browser-default) {
     background: transparent;
 }
+
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]) {
+    box-shadow: none;
+    border-bottom: 1px solid #fff;
+}
+

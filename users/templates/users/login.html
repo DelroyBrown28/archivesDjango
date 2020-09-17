@@ -1,20 +1,28 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="signin_wrap">
     <form method="POST">
         {% csrf_token %}
-        <div class="form-group">
-            <legend class="blog_title">archives.blog</legend>
-            <p class="blurb">A True History Data Warehouse</p>
+        <legend class="blog_title">archives.blog</legend>
+        <p class="blurb">A True History Data Warehouse</p>
+        <br>
+
+        <div class="form-group">    
             {{ form|crispy }}
+        </div>
+        <div class="forgotpw_wrap">
+            <a href="{% url 'password_reset' %}" class="forgot_pw_link">
+                Forgotten your password?
+            </a>
+            <i class="material-icons forgot_pw_icon">lock</i>
         </div>
         <div class="btn_wrap">
             <button class="signin_btn sign_in_btns" type="submit">Log In</button>
             <a class="register_btn sign_in_btns" href="{% url 'register' %}">Register</a>
-          
+
         </div>
-        <a href="{% url 'password_reset' %}">Forgot password?</a>
 
     </form>
     <div class="border-top pt-3">
