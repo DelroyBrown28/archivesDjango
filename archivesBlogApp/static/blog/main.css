@@ -96,6 +96,9 @@ a.article-title:hover {
 
 
 .blog_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 55px;
@@ -124,8 +127,17 @@ a.article-title:hover {
     border: none;
     transition: 0.3s;
     cursor: pointer;
-   
 
+}
+
+.sign_in_btns:hover,
+#writer_enter_btn:hover {
+    transform: scale(1.1);
+}
+
+.sign_in_btns:active,
+#writer_enter_btn:active {
+    transform: scale(0.7);
 }
 
 .signin_btn,
@@ -162,15 +174,13 @@ div#div_id_password {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-}
-
-.forgot_pw_link {
     opacity: 0.3;
+    transition: 0.3s;
+
 }
 
-.forgot_pw_icon {
-    opacity: 0;
+.forgotpw_wrap:hover {
+    opacity: 1;
 }
 
 
@@ -181,6 +191,16 @@ input[type=text]:not(.browser-default) {
 input[type="text"]:not(.browser-default):focus:not([readonly]),
 input[type="password"]:not(.browser-default):focus:not([readonly]) {
     box-shadow: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #B00000;
 }
 
+/* input[type="text"]:not(.browser-default),
+input[type="password"]:not(.browser-default) {
+    border-bottom: 1px solid #B00000;
+} */
+
+.nonfield-errors {
+    text-align: center;
+    transition: 0.3s;
+    color: #B00000;
+}
