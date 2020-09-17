@@ -81,9 +81,36 @@ a.article-title:hover {
 
 /* ---Login page--- */
 
+.header_contents {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20PX;
+    margin: 0;
+}
+
+.title_link {
+    font-weight: 300;
+}
+
+.nav_links_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 290px;
+
+}
+
+.nav_links {
+    font-weight: 300;
+}
+
 .signin_wrap {
     position: absolute;
-    width: 500px;
+    width: 400px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -92,6 +119,11 @@ a.article-title:hover {
     align-items: center;
 
 
+}
+
+.sign_in_form {
+    width: 100%;
+    
 }
 
 
@@ -110,6 +142,10 @@ a.article-title:hover {
     color: #ffffff93;
     font-weight: 300;
     margin: 5px 0px;
+}
+
+.password_signin_input_wrap {
+    
 }
 
 .btn_wrap {
@@ -137,7 +173,10 @@ a.article-title:hover {
 
 .sign_in_btns:active,
 #writer_enter_btn:active {
-    transform: scale(0.7);
+    transform: scale(0.9);
+    background-color: #B00000;
+    color: #fff;
+    border: none;
 }
 
 .signin_btn,
@@ -200,7 +239,12 @@ input[type="password"]:not(.browser-default) {
 } */
 
 .nonfield-errors {
+    width: 100%;
+    margin: 0;
     text-align: center;
     transition: 0.3s;
     color: #B00000;
+    align-self: center;
+
+    
 }
