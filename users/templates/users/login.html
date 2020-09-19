@@ -2,20 +2,22 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="signin_wrap">
-    <form class="sign_in_form" method="POST">
-        {% csrf_token %}
+    <div class="title_wrap">
         <legend class="blog_title">archives.blog</legend>
         <p class="blurb">A True History Data Warehouse</p>
-        
+    </div>
 
-        <div class="password_signin_input_wrap form-group">    
+    <form class="sign_in_form" method="POST">
+        {% csrf_token %}
+
+        <div class="password_signin_input_wrap form-group">
             {{ form|crispy }}
         </div>
         <div class="forgotpw_wrap">
             <a href="{% url 'password_reset' %}" class="forgot_pw_link">
                 Forgotten your password?
             </a>
-            <i class="material-icons forgot_pw_icon">lock</i>
+            <i style="color: #A63B00;" class="material-icons forgot_pw_icon">lock</i>
         </div>
         <div class="btn_wrap">
             <button class="signin_btn sign_in_btns" type="submit">Log In</button>
@@ -28,5 +30,22 @@
         <small class="text-muted">Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Here!</a></small>
     </div> -->
 </div>
+
+<!-- <script>
+    let signInUsernameInput = document.getElementById("id_username");
+    let signInPasswordInput = document.getElementById("id_password");
+
+    signInUsernameInput.onfocus = signInUsernameFocus;
+    signInPasswordInput.onfocus = signInPasswordFocus;
+
+    function signInUsernameFocus() {
+        $('.sign_in_form').addClass('the_shadow_man1')
+    }
+    function signInPasswordFocus() {
+        $('.sign_in_form').addClass('the_shadow_man2')
+    }
+
+
+</script> -->
 
 {% endblock content %}
