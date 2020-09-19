@@ -1,6 +1,29 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+
+<!-- <header class="header_contents__login">
+    {% if user.is_authenticated %}
+    <a class="title_link" href="{% url 'blog-home' %}">archives.blog</a>
+    {% else %}
+    <a class="title_link" href="#">archives.blog</a>
+    {% endif %}
+
+    <div class="nav_links_wrap">
+        {% if user.is_authenticated %}
+        <a class="nav_links" href="{% url 'post-create' %}">New Post</a>
+        <a class="nav_links" href="{% url 'profile' %}">Profile</a>
+        <a class="nav_links" href="{% url 'logout' %}">Logout</a>
+        <a class="nav_links" href="{% url 'blog-home' %}">Home</a>
+        <a class="nav_links" href="{% url 'blog-about' %}">About</a>
+        {% else %}
+        <a class="nav_links" href="{% url 'login' %}">Login</a>
+        <a class="nav_links" href="{% url 'register' %}">Register</a>
+        {% endif %}
+    </div>
+
+</header> -->
+
 <div class="signin_wrap">
     <div class="title_wrap">
         <legend class="blog_title">archives.blog</legend>
@@ -26,26 +49,7 @@
         </div>
 
     </form>
-    <!-- <div class="border-top pt-3">
-        <small class="text-muted">Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Here!</a></small>
-    </div> -->
 </div>
 
-<!-- <script>
-    let signInUsernameInput = document.getElementById("id_username");
-    let signInPasswordInput = document.getElementById("id_password");
-
-    signInUsernameInput.onfocus = signInUsernameFocus;
-    signInPasswordInput.onfocus = signInPasswordFocus;
-
-    function signInUsernameFocus() {
-        $('.sign_in_form').addClass('the_shadow_man1')
-    }
-    function signInPasswordFocus() {
-        $('.sign_in_form').addClass('the_shadow_man2')
-    }
-
-
-</script> -->
 
 {% endblock content %}
